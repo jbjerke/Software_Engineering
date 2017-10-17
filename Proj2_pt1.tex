@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr, fancybox}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{tabularx}
+\graphicspath{{c:/Users/jbjerke/OneDrive/Computer_Science/CpSc_3720/Proj2/}} 
+
+\usepackage{indentfirst}
+
+\setlength{\parindent}{1cm}
+
+\setlength{\columnsep}{1cm}
+
+\setlength{\headheight}{14.5 pt}
+\topmargin=-0.5in
+\headsep=0.3in
+\oddsidemargin=0in
+\textwidth=6.7in
+\textheight=9.2in
+\footskip=0.5in
+
+\renewcommand{\footrulewidth}{1pt}
+\pagestyle{fancy} \lhead{Project 2 Part 1 $|$ October 12 2017} \rhead{\thepage} \cfoot{{Team Smooth JAS}}
+
+\begin{document}
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+
+\center
+\large Computer Science 3720: Software Engineering \\[0.2cm]
+
+\normalsize Project 2:  Design \\[2cm]
+
+
+\HRule \\[0.2cm]
+
+\huge \textbf{Our Personal Training System}
+
+\HRule \\[0.5cm]
+
+\normalsize 10-12-2017
+\vspace{5cm}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.50]{TigerPaw_co.jpg}
+\end{center}
+\end{figure}
+
+
+\large \textbf{Team Smooth JAS}
+
+\emph{Jordan Bjerken}
+
+\emph{Ann Yip}
+
+\emph{Sally Lee}
+
+\end{titlepage}
+
+\section{Application-Level Classes}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.75]{Class_Diagram_P2}
+\caption{Class Diagram of our Personal Training System}
+\end{center}
+\end{figure}
+\section{Functionality Descriptions}
+\subsection{Trainee}
+The Trainee class is one that will encompass information that pertains to the trainees who will be using the PTS. The main functionality is it will contain the user/login credentials and have operations that allow the trainee to accomplish their purpose on the system such as creating a workout schedule. This class with interact with 3 other classes, Preferences, Payment, and Schedule. The Preferences class will assist the Trainee class when making decisions on how to build the perfect schedule while the Schedule class will contain the Trainee’s course schedule. The Payment class will help perform the operations to pay for any new courses selected by the Trainee.
+
+\subsection{FitnessProvider}
+The FitnessProvider class will be very similar to the Trainee class. The FitnessProvider class will have basic account/login information. This class will also have operations that will allow the Fitness Provider to manage their courses. The FitnessProvider class will interact with the Schedule class as well. The Schedule class will assist the FitnessProvider class in showing the Provider’s schedule and will allow them to make updates.
+
+\subsection{Admin}
+The Admin class will contain the account information for the Admin/Moderators of the PTS. The main functionality of this class is to allow the Moderator to have operations to verify the legitimacy of a Fitness Provider. If the Moderator deems the Fitness Provider unfit to be on the PTS, then the Moderator may disable the Provider’s account.  This class with interact with the FitnessProvider as Admin class will have to see information pertaining to the Providers. 
+
+\subsection{Preferences}
+The main functionality of the Preferences class is to hold all the preferences/filters that the Trainees specify as wants for their schedule therefore it will have to interact with the Trainee class and the Availability class which will show the Trainee’s availability for the whole week. The Preferences class will have an operation that will allow updates to the preferences.
+
+\subsection{Payment}
+The Payment class deals with the checkout process when using the PTS. There is no stored information in this class. It will calculate the total and verify payment information. There will also have operations to apply an incentive or get a refund if a class is canceled. This class will also interact with the Trainee and FitnessProvider class as they will will need to pay for courses. The Payment class will also interact with the Incentive class because certain users would be allowed to apply a discount to their purchase.
+
+\subsection{Schedule}
+The main functionality of the Schedule class is to hold the schedule that the Trainee or Fitness Provider has set. It has operations that can get the number of courses signed up and get course details. Not only does this class interact with the Trainee and FitnessProvider class, it will also interact with the Course class. The Schedule class will communicate with the Course class to be able to get course details. 
+
+\subsection{Availability}
+The Availability class holds all the times and days that the Trainee is available on. It does not perform any operations. The Trainee needs to have at least one availability set and this class basically extends the Preferences class. 
+
+\subsection{Course}
+The Course class basically contains all the details about the different classes offered on the PTS. There is an operation that updates the number seats in the class as people add or drop the class. 
+
+\subsection{Incentive}
+This class holds all the different discounts and promotions that can be applied at the checkout process that the Trainee can use. For each incentive given, there is a promo code and the discount only works if they purchase the minimum amount that is associated with the promo code.  
+
+\subsection{Search}
+The Search class can be called by the Trainee and it uses the Preferences class as filter to list course results that match with your schedule availability. 
+
+\section{Design Verification}
+The requirement laid out for our software was to provide a unique route to bring fitness providers and potential trainees together. This includes ensuring our software provides multiple detailed schedules using trainee preferences, secure payment capabilities, feedback opportunities to improve our product, and reasons for both trainees and providers to use our software. 
+
+	Smooth JAS’s software includes a class to input, and manage trainee preferences. There is also a scheduling class that uses these preferences to develop multiple schedule options with details about the classes such as distance from specified locations, cost of the courses, etc. These two classes work together to satisfy one of the requirements. Alongside scheduling, we include a class that allows for trainees and trainers to make payments using our software to sign-up for and post classes, respectively. To further improve our software, we also ensure there is a feedback class so we can gather data to analyze the success of the system. Finally, we include an incentive feature that will aid in bringing customers back whether they are the provider or trainee. 
+
+\section{UML Diagrams}
+\subsection{Incentive}
+\noindent%
+\begin{minipage}{\linewidth}
+\makebox[\linewidth]{
+  \includegraphics[keepaspectratio=true,scale=1]{Incentive_State_Machine_Diagram.png}}
+\captionof{figure}{State machine diagram of the Incentive class}
+\end{minipage}
+
+\subsection{Payment}
+\noindent%
+\begin{minipage}{\linewidth}% to keep image and caption on one page
+\makebox[\linewidth]{%        to center the image
+  \includegraphics[keepaspectratio=true,scale=1]{Payment_Activity_Diagram.png}}
+\captionof{figure}{Activity diagram of the Payment class}
+\end{minipage}
+
+\subsection{Schedule}
+\noindent
+\begin{minipage}{\linewidth}
+\makebox[\linewidth]{
+  \includegraphics[keepaspectratio=true,scale=0.75]{Schedule_Sequence_Diagram.png}}
+\captionof{figure}{Sequence Diagram of the Schedule class}
+\end{minipage}
+\end{document}

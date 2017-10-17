@@ -1,0 +1,911 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr, fancybox}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\graphicspath{{c:/Users/jbjerke/OneDrive/Computer_Science/CpSc_3720/Proj1/}} 
+
+\usepackage{indentfirst}
+
+\setlength{\parindent}{1cm}
+
+\setlength{\columnsep}{1cm}
+
+\setlength{\headheight}{14.5 pt}
+\topmargin=-0.5in
+\headsep=0.3in
+\oddsidemargin=0in
+\textwidth=6.7in
+\textheight=9.2in
+\footskip=0.5in
+
+\renewcommand{\footrulewidth}{1pt}
+\pagestyle{fancy} \lhead{Project 1 $|$ October 6 2017} \rhead{\thepage} \cfoot{{Team Smooth JAS}}
+
+\begin{document}
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+
+\center
+\large Computer Science 3720: Software Engineering \\[0.2cm]
+
+\normalsize Project 1:  Requirements Analysis \\[2cm]
+
+
+\HRule \\[0.2cm]
+
+\huge \textbf{Our Personal Training System}
+
+\HRule \\[0.5cm]
+
+\normalsize 10-06-2017
+\vspace{5cm}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.50]{TigerPaw_co.jpg}
+\end{center}
+\end{figure}
+
+
+\large \textbf{Team Smooth JAS}
+
+\emph{Jordan Bjerken}
+
+\emph{Ann Yip}
+
+\emph{Sally Lee}
+
+\end{titlepage}
+
+\section{Executive overview}
+Smooth JAS would like to propose a new and improved version of a personal training system. This system will conquer the challenges that any potential client could have in their life that prevents them from pursuing better fitness, and matches them with fitness providers that have the answers to their challenges. Our goal is to streamline the scheduling process and coordination of personal fitness training and wellness. Current training systems on the market do not integrate both aspects of scheduling and personalized training.  In our system, we give you both aspects in one piece of software. By using our system, companies of all shapes and sizes can focus more on their niche and bring in more revenue from untapped sources. 
+
+	This system is projected to grow in profits and will be built to allow for further expansion based on user feedback. The software will be developed in stages and will include testing in between each stage. Currently, we plan on having both administrative and user features that make our software unique.  Not only will our system provide possible schedules with different tradeoffs, it will book the selected reservation for you, making this process much more efficient.  And want to pay then and there? That will also be possible for our users. Smooth JAS’s software will also perform these functions for groups of people. This will allow the system to provide a more individualized training program and also an inclusive experience for new clients and their friends. Overall, our PTS has a lot of potential in various sectors and will help companies reach their goals they never thought possible. 
+
+\section{Business Case}
+Smooth JAS is venturing to bring an aspect to the world of physical fitness that is currently lacking. Our company understands that for some people, scheduling in your health and wellness can be difficult.  It is also hard to know all of the available fitness options in an area and decide which one is best for a specific person.  By creating our Personal Training System (PTS), we are able to increase revenue for fitness providers by targeting the demographic of people who normally wouldn’t use their services.  Our product connects users with these providers that better meet their needs, upping user satisfaction and involvement, and scheduling is made easy.
+
+	Our system will offer multiple training options based on individual inputs such as availability, training requirements, and event type. The system will list important information about the offered trainings and a user will determine the different tradeoffs in order to make the most optimal decision. Once a training is selected, scheduling is one step easier by allowing users to make the needed reservations and also pay for the training all through our site.  Our system will also track goals and assess progress by providing fitness providers with information such as the number of additional users they have gained through our system, addition revenue they have made, etc. 
+
+	Systems like this have been proven successful.  Services such as Uber and AirBnB have continually grown in popularity and use over the past few years. The fitness industry is valued as a \$9 billion dollar industry that will continually to grow about 3\% each year. The opportunity that resides in the fitness industry is vast. According to the Center for Disease and Control, 70.7\% of adults over the age of 20 are either overweight or obese. Fitness specialists are always creating new and trendy workout regimes that appeal to all ages and fitness levels like Zumba and CrossFit which are continuing to grow in popularity. As a company, we feel that our system will be able to bring in significant revenue if we supplement the fitness industry by creating the PTS.
+
+
+\section{Stakeholders}
+The stakeholders for the PTS include the contractors, IT department, system administrators/moderators, fitness providers, and trainees.  The contractors will be concerned with timing and budget.  They will be in charge of what features we offer.  The IT department will ensure the software runs smoothly and provide improvements and patches where needed.  System administrators/moderators will hold a wide range of duties, including: monitoring users, system features, network communication, and security. They will be in charge of documenting system progress, and communicating feedback to the IT department.  Consenting fitness facilities will provide the individual and group exercises/events and will use the system to set up trainings.  They will be more concerned with providing the course details.  Trainees are the primary targets of the training system.  Our PTS will especially target a population of people that are not yet a part of the fitness community. Their involvement and feedback will reveal how efficient the system is and also heavily impact further innovation of the software to come. 
+
+	The PTS will provide a variety of features to meet both administrative and user needs.  Trainers can upload the trainings they offer, specifying date, location, time, type of event, and class size.  Our software will then “match” their trainings to users who wouldn’t normally use their services.  Trainers can also specify a price and get payment directly through our system.  Fitness providers will also have progress reports that include information on the amount of users that have signed up through our system and the profits made.  To help maintain user involvement, our system will also offer incentives.
+
+	Users also have a variety of features they can use in this system.  The PTS initially asks users for their schedules as well as preferences such as prefered training times, location restraints, etc.  This information is used to match and filter classes that better fit their needs and preferences.  The users can also expect a recommendation feature where new classes are recommended based on the previous classes attended.  A user’s progress can also be tracked on how many events they attend and goals they set.  Users will also be offered incentives to maintain involvement. 
+
+	The contractors and IT stakeholders can expect all of these features plus others they deem important.  An additional maintenance feature we may add is a feedback area from admins and users, where they can report problems and make suggestions. This will help IT people constantly assist with and monitor the system so that is continues to improve.
+
+\section{Stakeholder Questions}
+\subsection{Contractors}
+\begin{enumerate}
+\item Are our features performing the right functions?
+\item Who are the key stakeholders? Are we talking to the right people?
+\item Who is using the software? What level and types of education are they presumed to have?
+\item What do we consider an advantageous offering in the area?
+\item How do we determine trade-offs? How do we prioritize the trade-offs? Are the trade-offs seen on the company’s level, the group’s level, or the individual’s level?
+\item What is the goal of changing software for training? What problems are we trying to solve with this software?
+\item Does this system have actual courses or is it primarily a schedule determiner?
+\item What kinds of “Personal Training” should we consider while doing this project?
+\item Who is providing the training? Is the training going to be available through the system or will this schedule the training to be in person?
+\item How long do we have to produce the software?
+\item What is the budget for the production of the software?
+\item Are there other similar systems that ours will be competing with?
+\item How should we build the system interface structure? Is it personalizable? How do we want the software to look? (I.e. user interface)
+\end{enumerate}
+\subsection{Fitness Providers}
+\begin{enumerate}
+\item How do we determine and monitor progress in the course? Can progress regress?
+\item How should we consider having the program differentiate between training as an individual or a group? Should the user have options or is it to be pre-determined/ position-dependent?
+\item If a client from our site is inappropriate during trainer’s classes, would you like our software to ban or give some form of consequence?
+\item Do we need a progress report feature for what our software is doing for you as a class provider? 
+\item Do people get to choose their teams or are groups determined by admins? 
+\item What type of media should we expect as propaganda/advertising for the classes? 
+\item  Is there a certification involved with trainings?
+\item Should there be a maximum and minimum team size from us? Do you want to have some of your seats reserved for pre-existing members from your gym?
+\end{enumerate}
+\subsection{IT and Maintenance}
+\begin{enumerate}
+\item What kinds of feedback would you value from Admins and Users to improve the system?
+\item What platform or system should the software be available on or work most efficiently on?
+\item How do the features interact with each in response to changes? (flowcharts)
+\end{enumerate}
+\subsection{Administrators and Moderators}
+\begin{enumerate}
+\item What features would you like in order to do your job ?
+\item How quickly would you want to system to be back up in case there was a system failure?
+\item How many admins do you think we need?
+\item Should there be different teams of admins in terms of OS? Yes or no
+\item How do you moderate a site?
+\end{enumerate}
+\subsection{Users}
+\begin{enumerate}
+\item What qualifies a schedule as suitable?
+\item What factors should we consider when determining multiple suitable schedules?
+\item What kinds of “preferences” do users have in regards to their schedules?
+\item What do we want the users to take away from this training? 
+\item How do we quantify the goals and needs of a group? 
+\item Is the schedule blocked off or is it determined by user input?
+\item Should the system recommend available online trainings based on previous trainings or searches? 
+\end{enumerate}
+\subsection{Generic}
+\begin{enumerate}
+\item Are we asking the right questions?
+\item What should this program do [to meet your needs]?
+\item What features are most important to the stakeholders/users of this PTS? 
+\item What features do stakeholders not want? 
+\item Do we have all of the right features?
+\end{enumerate}
+\section{Interview Summaries}
+\subsection{Contractors (Blair)}
+\begin{enumerate}
+\item \textbf{Question:}  How do you want us determining the trade offs between the areas?
+
+\textbf{Answer:}  Basically users will sign up for the system and enter in their schedules and be given courses they can sign up for.  The system won’t explicitly tell them tradeoffs and say one is better than the other.  The user will be able to figure it out through the information available.  If I say I’m interested in volleyball, the system will show me all the trainings/games and if one was say 5 miles away and another was 20, the 5 miles away one would be better.  Lots of different factors: schedule, distance, interest, general venue, etc.  It’s more up to the user.
+
+\item \textbf{Question:} So is this PTS open to just gyms or is it open to other companies or businesses?
+
+\textbf{Answer:} It’s completely open ended.  We want a contract with as many fitness providers as possible and we don’t want to limit it.  However we do want to maintain our brand identity, fitness.  There is leeway, you could offer things like Yoga, Martial Arts, Spa maybe.  Also health and wellness and nutrition but don’t go too out there.
+
+\item \textbf{*Question:} Are there other example Systems we could be looking at to gain ideas from?
+
+\textbf{Answer:} This is very unique, we’re definitely drawing ideas from Uber and AirBnB with matching providers/services with users.  We’re not competing with them.  Our only competition are providers that have their own websites. I see it more as we’re supplementing these websites thought. Users can sign up through them or us.  Hopefully our way will be better.
+
+\item \textbf{Question:} Do we offer our own courses or is it through other people?
+
+\textbf{Answer:} We’re primarily a schedule determiner.  We match them based on their schedule, they can pay on the website, manage their courses, set up recurring attendance (also cancel).
+
+\item \textbf{Question:}  How do you want the system to look? Should it be personalizable?
+
+\textbf{Answer:}  I don’t really know, but we want it to look good on multiple platforms.  Looks good and usable.  The first release we want it to work and the first impression of user experience to be really good.
+
+\item \textbf{Question:}  In terms of what’s already available, what problems are we trying to solve with our software?
+
+\textbf{Answer}:  The problem is the fitness craze going on now people want to be healthy. There are now fitbits and apple watches etc. We want to get in on that.  Fitness buffs know what is out there but there is a large untapped group out there that would probably use fitness if they knew what was available and it was easier to sign up/see options.  There are a lot of variables that keep people from participating.  That is the central challenge, that all of these programs are available and there are a lot of people who don’t know about them.  The challenge is connecting these two groups that are currently not connected.
+
+\item \textbf{Question:} In terms of trainers, are you just talking anyone that wants to lead a class can lead or should they be certified? 
+
+\textbf{Answer:} Yes, we do but that’s not something the software should handle. The moderators should handle and verify if they are certified and delete unqualified people as needed. In terms of who can sign up on our software, we don’t care if they are individuals or businesses, volunteer orgs, or even government programs - basically anyone.
+
+\item \textbf{Question:} Are there any other features that we haven’t discussed that you deem important?
+
+\textbf{Answer:} Matchmaking, account creation, sign up, moderation/admin side, we need a way to gauge how well the software is working - allow users to give feedback on how the software is working itself
+
+\item \textbf{Question:} When tracking a user’s progress, should we ever regress their progress if they are inactive? 
+
+\textbf{Answer:} This is open ended - I don’t see that as a core feature, but we want some way to track progress as an incentive to keep the user active on our system. We need to be careful about regressing user’s progress because we don’t want to discourage them.
+
+\item \textbf{Question:} Would you like a feature that recommends courses based on courses the user’s done in the pass?
+ 
+\textbf{Answer:} Yes, but I don’t see that as a core feature
+
+\item \textbf{Question:} Time constraints? Budget?
+
+\textbf{Answer:} This December 2017 ; unlimited budget - but there are always risks involved, if providers don’t sign up 
+
+\item \textbf{Question:} How are we tracking the progress - by how many classes they take or what?
+
+\textbf{Answer:} I don’t see the progress tracking as a core feature. Should be open ended. Let the users set their own goals
+
+\item \textbf{Question:} Should there be a max or min team size? 
+
+\textbf{Answer:} This should be up to the service providers. The provider should be able to enter this into the system and track how many available spots are open.
+
+\end{enumerate}
+\subsection{Fitness Providers (Ann)}
+\begin{enumerate}
+\item \textbf{Question:}  If we have a group of people would you like us to fill the entire class through the website or would you like to fill with a portion of your class?
+
+\textbf{Answer:}  If it was more flexible on my end that would be better. I would like to be able to have both options because some of classes might fill up faster than others and I want to make sure I have room for my regulars and people that are joining from the personal training system. 
+
+\item \textbf{Question:}  What would you consider a good incentive to keep you guys a part of this
+
+\textbf{Answer:}  The turn outs of a lot of members, making profit
+
+\item \textbf{*Question:} How would you deal with users of different fitness levels? 
+
+\textbf{Answer:}  I can specify if it’s a beginner class or more advanced class.
+
+\item \textbf{Question:}  Are yall going to give us your own link/advertisements? 
+
+\textbf{Answer:}  A bio of myself, like a facebook page for a business, that would help users determine if my class was a good class for them
+
+\item \textbf{Question:}  Would you like to offer incentives through our service?
+
+\textbf{Answer:}  Yes, I think that would definitely help bring in more customers.
+
+\item \textbf{Question:}  For your classes if they were members only, would you be willing to offer access to these classes to satisfy
+
+\textbf{Answer:}  Free trials might be good to include - trying a class first before joining the gym.
+
+\item \textbf{Question:} How do you want payment to work?
+
+\textbf{Answer:}  In terms of payment if it was offered in both places - in house and online.  No processing fee. 
+
+\item \textbf{Question:} If we have a person that is disruptive, what do you want us to do about that? Like blocking them from attending courses.
+
+\textbf{Answer:}  I as a provider would be able to report this person on the system and remove them from further attending my classes for a certain amount of time. 
+
+\item \textbf{Question:}  What do you want the system to do as a whole for you? 
+
+\textbf{Answer:}  I want the website to describe what I’m doing, display prices, maybe some of the specials we have, a list of classes, our amenities.  I want to make money, I want to get new members and retain these members.  
+
+\item \textbf{Question:}  Would you like a progress report on users with data analytics that help show how the system is working?
+
+\textbf{Answer:}  Yes that would be a cool feature.  I’d like to see how my business is progressing with the system.
+\end{enumerate}
+\subsection{IT and Maintenance (Sally)}
+\begin{enumerate}
+\item \textbf{Question:} What kind of feedback would you value from users and fitness providers?
+
+\textbf{Answer:} I would value feedback dealing with if the system was working correctly.  It would be helpful if users of the site could send a report about what was not working.  Also any recommendations to improve the system would be accepted such as new feature requests.
+
+\item \textbf{Question:} What platform or system should the system work on? 
+
+\textbf{Answer:}  The system should have compatibility across all internet browsers and devices.  We will want it to look good on laptops, tablets, ipads, phones, etc.  Eventually we will want to create downloadable apps for both Androids and iPhones.
+
+\item \textbf{*Question:} How often should IT push out new patches and updates?
+
+\textbf{Answer:} We will first want to have a working model put out by December that is functionally correct.  Near the beginning we will probably have more frequent patches (maybe 2 - 3 times a week).  Later on as we fix more and more issues, I would probably say we’d move to weekly or biweekly updates/deployments depending on priority.  We are also going to be pushing out new features as time progresses so that is another thing to look forward to.
+
+\item \textbf{Question:} What types of IT people do we need?
+
+\textbf{Answer:} We will need Back-end Developers, Front-end Developers, Quality Assurance people, and Network Security people to name a few.  We will also need Customer Service people who can help both fitness providers and users through technical problems they have with their accounts.
+
+\item \textbf{Question:} Would you like to work with cutting edge technology (like deep learning) ? 
+
+\textbf{Answer:} We don’t need to sacrifice a working product for the use of cutting edge technology. The main thing that matters in the beginning is that it works and is reliable. I would rather spend time developing what we know rather than learning something new to develop it.  Later on, if market trends show a newer technology emerging, we can hop on board and start applying it to our product.
+
+\end{enumerate}
+\subsection{Administrators and Moderators (Sally)}
+\begin{enumerate}
+\item \textbf{Question:} What features would you like in order to do your job ? 
+
+\textbf{Answer:} I would like an automated feature to block unwanted/unfriend participants from certain classes that providers deem as disruptive and etc.  I also want a feature that creates notifications for users about routine maintenance downtime.
+
+\item \textbf{*Question:} What info would you like for users to input in order to make an account?
+
+\textbf{Answer:} Users need to include their name, address - helpful for recommendations of classes, email/username, phone number (not required - for SMS reminders), and a password.  Upon initial contact, users will also need to set up their preferences so our system can better match them with available listings.  These preferences should be able to be changed at any time as well.
+
+\item \textbf{Question:} How quickly would you want to system to be back up in case there was a system failure?
+ 
+\textbf{Answer:} If the system was unexpectedly down 10 mins max would be desired but I am unsure how logical this request is.
+
+\item \textbf{Question:} How many admins do you think we need?
+
+\textbf{Answer:} We will need Deployment admins - for backups , Network communications - for file systems, user based admins, and provider based admins.
+
+\item \textbf{Question:} Should there be different teams of admins in terms of OS? Yes or no
+
+\textbf{Answer:} yes
+
+\item \textbf{Question:} How do you moderate a site?
+
+\textbf{Answer:} I will check and see if providers are up to date on their postings and schedules.  I will also check for inappropriate users, check which users are inactive, and give incentives to bring inactive users back.  I will also need to be able to determine which fitness providers are legitimate.
+\end{enumerate}
+\subsection{Users (Jordan)}
+\begin{enumerate}
+\item \textbf{Question:} What “preferences” do users having in regards to their schedule?
+
+\textbf{Answer:} Time Blocking that can let me get to places in time. Options that have early mornings/late night sessions of exercise. I’d like to be able to specify the range. I like smaller groups. It would be helpful to recommend classes based on prior involvement.  Also if I could search for classes available.
+
+\item \textbf{*Question:}  What is your main goal for using this program.  Do you want to try new thing?
+
+\textbf{Answer:} I want help fitting things into my schedule.  Also trying to help myself get into the habit of going to the gym.  I have difficulties squeezing health into my schedule.
+
+\item \textbf{*Question:} How should we sort the available trainers?  
+
+\textbf{Answer:} Location in comparison to either work or home, and cost. Also then the quality of the trainers.  Prioritize setting things up with higher rated people on the trainers sites that are closer to work or home and that is within budget.
+
+\item \textbf{Question:}  What kind of incentives would you like to help you stay on board with the system.
+
+\textbf{Answer:} I think it would be neat to have a gold star system. Once you reached a certain number,  you knocked off 5 dollars. Also monthly drawings for gift cards or entering into sweepstakes if I reach a certain number of stars by the end the month.  After about a month of inactivity, a fifty percent off coupon would be fantastic. Perhaps if the system could take in responses as to why, and then work for coupons for classes that answer the problem. As an example, some of the things that take me away from this sort of thing is I don’t have the time to fit it in.  So if the coupons were for short little programs that might help me better fit it into my schedule.
+
+\item \textbf{Question:}  Payment options?
+
+\textbf{Answer:} You can offer to store the information.  But I’d also like to have the option to just pay when I get there.  If it’s a recurring, it would be helpful to have incremental options or paying in bulk.  It would also be nice if it was refundable.  And if the system sent me a reminder either via text or email depending on what I choose when I create an account.
+
+\item \textbf{Question:}  How do we determine and monitor progress in the course.
+
+\textbf{Answer:}  Perhaps the number of times I participate in an activity and also frequency.  But mostly I think it depends on the person’s goal.  Say weight loss is my goal, but if I’m eating badly I wouldn’t be losing weight even with involvement in the classes. The system would just need to know what aspects to generic goals need to be monitored.
+
+\item \textbf{Question:}  Should we integrate health tracking devices with our system?
+
+\textbf{Answer:}  If you could integrate fit-bit-esque technology,  that would be good to track progress
+
+\item \textbf{Question:} Do we need a progress report feature? 
+
+\textbf{Answer:}  Weekly progress reports would be neat.  This is where you at with your goal.
+
+\item \textbf{Question:}  Any additional features would you like to see? 
+
+\textbf{Answer:}  If you were to also include nutrition or nutritionist to complement the training that you’re doing. That application of wellness would be a good.  Maybe have resources a user could use.
+
+\item \textbf{Question:}  Do you have any other concerns or features you would like to add to those we have already mentioned?
+
+\textbf{Answer:}  There are types of fitnesses that are unscheduled.  Like hiking.  Bringing up local places that you could go hiking or swimming. This is probably not monitorable but still is encouraging.
+
+\end{enumerate}
+
+\subsection{Unanswered}
+\begin{enumerate}
+\item Are there any additional features we are forgetting?
+\item How do we want the moderator to moderate the users? 
+\item How popular would additional resources like wellness and nutrition be to users? 
+\item Would we want to integrate data with fitness tech (like fitbits) to help with goal setting and tracking progress when users attend classes?
+\item How would be determine if a service provider that sign up for our site is a legitimate business and not a scam?
+\end{enumerate}
+
+\section{Risk Analysis}
+Unfortunately, no company is perfect, and risk is always inherent. Smooth JAS is not impervious to this either. Therefore, we would like to touch on the risks associated with our proposed Personal Training Software.
+\begin{itemize}
+\item \textbf{Scheduling}
+\begin{itemize}
+\item Overbooking. Overbooking class rooms would cause conflict over who actually gets to attend, and, ultimately, exclude people that should have been in the class. If this happens too frequently, we could lose customers, and the Providers that have to deal with the conflicts. Our algorithm will ensure that this is a low risk; however ,if in a moment of failure, this would have a high impact. People will not continue to use a software that does not guarantee them a spot in the classes.
+\item Scheduling with incompatible classes. If the only classes that can fit into a user's schedule is with instructors that the user is not compatible with, then the user may be discouraged to continue using our matching system. Due to the subjectivity of the risk, this is low or high risk depending on the person; however, the impact this have would be high. This could greatly effect how customers rate our system and use our software.
+\item Algorithm incapable of creating a suitable schedule. Especially with groups that have complex schedules, if our matching algorithm fails to derive a satisfactory schedule, users will think our system is useless, and not return. This would be a high risk, and high impact. Users would definitely leave if the algorithm fails and the software is useless. 
+\end{itemize}
+\item \textbf{Search}
+\begin{itemize}
+\item Over-filtering. If the user applies too many filters to really specify their desires, our system may not be able to show the suitable classes. This would make the customer think we do not offer satisfactory classes, when they just over-filtered. This is a low risk, and low impact. Users can just research.
+\end{itemize}
+\item \textbf{Payment}
+\begin{itemize}
+\item Payments do not go through properly. This would be a high risk. This could result in frustration from the user, and may prevent them from participating in classes they thought was successfully scheduled. 
+\item Multiple charges. This would be a high risk with high impact. If our system malfunctions and charges cards multiple times, that would be months of corrections and potential lawsuits for the company. 
+\item No suitable method of payment. This would be a low risk, but high impact. If we do not offer a suitable method of payment, the user may not be able to pay for the class, and a potential source of revenue will remain untapped.
+\item Incapable of correctly using incentive deals. This would be a high risk, and potentially high impact. If we offer incentives, but the system does not use the incentives properly when the user pays, the user will feel cheated and frustrated. This might cause them to leave.
+\item Terrible security. This would be a high risk with high impact. If our security on payment operations fails, then that could risk our customer's financials putting Smooth JAS in line for law suits. 
+\end{itemize}
+\item \textbf{Progress}
+\begin{itemize}
+\item Progress does not reflect what the user believes. This is a low risk with high impact. Our progress algorithm is relatively simple so should not be a problem. In the event it is, it could potentially discourage the user and drive them away. Reducing revenues of our providers. 
+\item No classes available for the desired progress. This would be a high risk with high impact. If we cannot offer the proper classes, then the user will leave disappoint and reflect poorly on our software. 
+\item Incentives are not enough for the user or provider. This is a high risks with low impact. We like to bring people back after inactivity, but if our incentives are weak, then we will not be able to bring them back and lose customers. The same could also happen to the providers. If our incentive to the business is lackluster, we could lose fitness providers. However, if we cannot bring them back with incentives, the business will be running about the same; hence the low impact. 
+\end{itemize}
+\item \textbf{Feedback}
+\begin{itemize}
+\item Users will provide feedback on the providers rather than the system. This is a low risk with low impact. We primarily desire feedback on our program, but if the clients do not comply, the feedback is irrelevant and useless.
+\item Feedback on features that cannot be changed or features that are not possible. This is a low risk with low impact. If the feedback concerns a foundational function, Smooth JAS will not be able to use this information. If The feedback is a recommendation to add a feature that is impossible, then, once again, the feedback is useless. 
+\end{itemize}
+\item \textbf{Login}
+\begin{itemize}
+\item Security of the profile. This is a high risk with high impact. If the profiles are not secure, private information could be leaked. This would cause the company to potentially be sued in the long-run. Potential customers would also be discouraged to join. 
+\end{itemize}
+\item \textbf{Manage Classes}
+\begin{itemize}
+\item Class attendee count could constantly fluctuate. This is a low risk with low impact. This could upset the providers, and cause them to pull certain classes or all of their programs if they are not able to get an accurate enough gauge in time. However, this should not be a problem unless an overbooking situation occurs. 
+\end{itemize}
+\end{itemize}
+\newpage
+\section{System Use Case}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.8]{UseCase_P1.png}
+\end{center}
+\end{figure}
+
+\newpage
+\section{Use Case Description}
+\subsection{Schedule Training}
+\subsubsection{trainee}
+\noindent Primary Actor: Trainee
+
+\noindent Goal Level: Sea Level
+\newline
+
+\noindent Stakeholders and Interests: Fitness Provider - Fitness provider wants to add classes to the 
+
+system.
+
+\noindent Trainee - Trainee wants to join a class provided by the fitness provider
+\newline
+
+\noindent Trigger/Precondition: Trainee has created an account, specified preferences, logged in, and 
+
+have searched for a type of training.
+
+\noindent Postcondition: Trainee has scheduled a class.
+\newline
+
+\noindent Main Success Scenario:
+\begin{enumerate}
+\item Fitness Provider provides current trainings
+\item User \underline{searches for desired trainings}
+\item System gives multiple suitable schedules and trainings
+\item User selects a training to attend
+\item User \underline{pays for training}
+\item System adds training in managed user schedule
+\item System reminds user of training
+\newline
+\end{enumerate}
+\noindent Extensions:
+
+\noindent 2a: Fitness Provider adds new trainings
+
+	.1: Provider gives information on location, time, class size, etc.
+
+\noindent 4a: No schedules match with user preferences
+
+	.1: System asks User to change filter settings and returns to MSS at step 3
+
+\noindent 6a: User wishes for notifications in preferences
+	
+	.1: System sends User an email reminder
+	
+	.2: System sends User a text message reminder
+
+\noindent 6b: User doesn’t wish for notifications
+	
+	.1: System sends a reminder in the system in the managed user schedule
+
+\subsubsection{Trainer/Fitness Provider}
+\noindent Primary Actor: Fitness Provider
+
+\noindent Goal Level: Sea Level
+\newline
+
+\noindent Stakeholder and Interest: Fitness Provider - Fitness provider wants to add classes to the system
+
+\noindent Trainee - Trainee wants to join a class provided by the fitness provider
+\newline
+
+\noindent Trigger/Precondition: Fitness Provider is a member of our system, they have logged in, and 
+
+have classes that they don’t restrict to only their exclusive members. 
+
+\noindent Postcondition: Course(s) are added to the system and is available for Trainees to sign up and 
+
+attend. 
+\newline
+
+\noindent Main Success Scenario:
+\begin{enumerate}
+\item Fitness Provider clicks on “add courses” button 
+\item Fitness Provider fills form with information about the course
+\item Fitness Provider clicks on “save course” button
+\item System adds training in Fitness Provider’s schedule 
+\item System adds training to list of possible classes
+\newline
+\end{enumerate}
+
+\noindent Extensions:
+
+\noindent 3a: Fitness Provider leaves off required information about the course
+
+	.1: System outputs error message and prompts Fitness Provider to re-enter information,
+	
+	.2:Fitness Provider clicks “Ok”
+	
+	.3 System returns to MSS at step 3
+
+\subsection{Pay For Training}
+\subsubsection{Trainee}
+
+\noindent Primary Actor: Trainee
+
+\noindent Goal Level: Sea Level
+\newline
+
+\noindent Stakeholder and Interest: Fitness Provider - Fitness Provider would like to receive payment 
+
+from Trainees for services to be provided.
+
+\noindent Trainee - Trainee wants to make a payment online instead of on the site of the fitness course.
+\newline
+
+\noindent Trigger/Precondition: Trainee has an account, specified preferences, logged in, searched for 
+
+courses, added tentative courses to their fitness plan(schedule)
+
+\noindent Postcondition: Trainee has paid for all courses selected
+\newline
+
+\noindent Main Success Scenario: 
+\begin{enumerate}
+\item User goes to check out
+\item System displays pricing information
+\item User enters in payment information 
+\item User selects submit payment
+\item System verifies and authorizes payment information
+\item System confirms class reservation immediately
+\item System sends confirmation email to User
+\end{enumerate}
+
+
+\noindent Extensions: 
+
+\noindent 6a. User is a regular customer
+
+	.1: System displays saved payment information from previous transactions
+	
+	.2: User may confirm or edit information automatically displayed, return to MSS at step 7
+
+\noindent 8a. System fails to verify/authorize payment information
+	
+	.1: User will be prompted to re-enter payment information or they can exit the checkout process. 
+
+\noindent 10a. User decides to cancel their reservation
+	
+	.1: User clicks link in email to cancel
+
+	.2: System refunds money 
+
+	.3: System releases the spot from the class
+
+	.4: System issues a confirmation email to User
+
+\subsubsection{Trainer/Fitness Provider}
+\noindent Primary Actor: Trainer/Fitness Provider
+
+\noindent Goal Level: Sea Level
+\newline
+
+\noindent Stakeholder and Interest: Fitness Provider - Fitness Provider would like to pay for a subscription 
+
+to our system in order to add a specific number of courses a month.
+\newline
+
+\noindent Trigger/Precondition: Fitness Provider has a validated account, has specified business 
+
+information, has logged in, and (optional) has input class information
+
+\noindent Postcondition: Fitness Provider has paid for monthly subscription for the PTS
+\newline
+
+\noindent Main Success Scenario: 
+\begin{enumerate}
+\item Fitness Provider goes to check out
+\item System displays subscription level information or fees for adding number of courses
+\item Fitness Provider enters in payment information 
+\item Fitness Provider selects submit payment
+\item System verifies and authorizes payment information
+\item System processes and confirms subscription
+\item System sends confirmation email to Fitness Provider
+\item System unlocks the add courses feature
+\end{enumerate}
+
+\noindent Extensions: 
+\noindent 3a. Fitness Provider already input information when creating account.
+
+	.1: System displays saved payment information from account
+	
+	.2: Provider confirms or edits information automatically displayed
+	
+\noindent 5a. System fails to verify/authorize payment information
+	
+	.1: System displays error message
+	
+	.2: Provider prompted to re-enter payment information or exit the payment process, repeat MSS step 5
+
+\noindent 7a. Provider decides to cancel their future monthly subscriptions/payments
+	
+	.1: Provider clicks link in email to cancel
+	
+	.2: System marks Provider as inactive 
+	
+	.3: System cancels automatic payment
+	
+	.4: System eliminates classes from search at end of month
+	
+	.5: System issues a confirmation email to Provider
+
+\subsection{Track Progress}
+\noindent Goal Level: Sea Level
+\newline
+
+\noindent Stakeholder and Interest: Trainee - Trainee wants to see how they are performing and try to earn incentives 
+\newline
+
+\noindent Trigger/Precondition: Trainee has an account and is logged in.
+
+\noindent Postcondition: Trainee will make progress towards their goals. In the event of inactivity, an 
+
+incentive to participate is provided.
+\newline
+
+\noindent Main Success Scenario:
+\begin{enumerate}
+\item System displays user dashboard
+\item User specifies goals
+\item System tracks user involvement in trainings
+\item System tracks how goals are met
+\item Upon completion of goals, 
+\item System \underline{gives user incentives to maintain involvement}
+\end{enumerate}
+
+\noindent Extensions:
+
+\noindent 2a: User doesn’t specify any goals
+	
+	.1: System bases progress tracking solely on training attendance
+
+\noindent 4a: User doesn’t specify any goals
+
+	.1: System bases progress tracking solely on training attendance
+	
+\noindent 6a: User becomes inactive
+
+	.1: System sends user incentive to reinvolve user
+
+\subsection{Search} 
+Search will use user preferences and specified filters such as location constraints, size, time, etc.  A user will search for an event type they are interested in and results from many trainers will be listed in a sorted order.
+
+\subsection{Manage Classes}  
+Users first log into the system and view their dashboard. Recent Activity will display the classes they are scheduled to attend the next few weeks.  Users may click on each of these classes to view training information such as location and time.  Users may also set up reminders for these classes through email and text messages.  If necessary, each class will provide a link to cancellation in case unforeseen complications arise.
+
+\subsection{Report System Issues/Website Feedback}
+Users and Fitness providers will have a feature of reporting issues and providing feedback on the system that IT Maintenance personnel can view.  This report feature will include space for people to specify any problems they encountered with the system.  This can also be a way of recommending new features.  Users and Fitness providers can choose to rate their experience with the system and offer explanations as to their rating.  IT Maintenance people will receive this feedback and use it to improve the system.
+
+\subsection{Login}
+To log in, users will enter in their username and password. If password or username was entered incorrectly, the system will prompt the user to re-enter the information. If no account was found with that username, the system will ask the user if they would like to create an account. When an account is created a user must specify personal information.  They need to also set their preferences such as location constraints, and times of the day.
+
+\subsection{Report Inappropriate Users}
+The fitness provider will log in to the system and select which class the provider would like to report. The fitness provider will indicate which user was inappropriate. A ticket/message will be sent to a moderator.  The moderator will evaluate the situation and issue warnings/consequences to the specified User.  User’s account will be locked for a specified amount of time depending on the severity of the issue.  Then the user account will be unlocked.
+
+\subsection{Give/Get Incentive}
+The system will evaluate the user’s activity. If the user has not been active for a period of time, the system will send incentives offered by fitness providers in the hopes of increasing the User’s involvement.  The system will also reward active users after reaching goals and attending many classes.  Incentives include discounts on trainings.  There may also be monthly drawings/giveaways for active members.
+
+\subsection{Validation System Providers}
+Admins/Moderators will have this feature which allows them to view fitness provider information and judge whether they are valid providers.  The system will ask Fitness providers to supply information such as Employer ID number and Tax ID number.  If these don’t check out, Admins will be notified and can check this information.  They can disable the provider’s account so no classes can be added and notify the business to correct their information.
+
+\section{Input/Output Scenarios}
+\subsection{Trainees}
+\subsubsection{Barbara}
+\begin{enumerate}
+\item Barbara wants to create an account using our personal training system. She signs up with her email and password. Upon creating an account she is prompted by the system to set her user-preferences.
+
+\begin{tabular}{| m{4cm} | m{11cm}|}
+\hline
+User Requirements: & Barbara has logged in with her new account \\
+\hline
+Input: & Barbara must set her user preferences and her availability in her schedule. 
+\newline
+
+-Sets her 1st location preference as Sesame Street, SC and her second location preference as Candyland, SC and prefers her classes to be within a 15 mile radius.
+
+-She does not specify a preferred class size or price range.
+
+-She sets a personal goal to attend a variety of classes to try new things.
+
+-She opts in for text message reminders and provides her cell phone number: 803-999-9999
+\newline
+
+Her availability:
+
+Monday, Wednesday, Friday 6:00 am - 7:00 am, 8:00 pm - 10:00 pm
+
+Tuesday, Thursday 12:00 pm - 1:00 pm
+
+Saturday 2:00 pm - 4:00 pm
+\\
+\hline
+Output: & The system saves her information and displays her personal profile page. \\ 
+\hline
+\end{tabular}
+
+\item Barbara wants to search for cycling classes near her. 
+
+\begin{tabular}{| m{4cm} | m{11cm} |}
+\hline
+User Requirements: & Barbara has set her user preferences and availability as shown in scenario 1. \\ 
+\hline
+Input: & Search "Cycling" and preferences/availability \\
+\hline
+Output: & Options:
+
+Spin to Win 
+
+Instructor: Jack Daniels
+
+Time: 8:00 pm - 9:00 pm MWF
+
+Location: 3.2 mi. from Sesame St.
+
+Cost: \$20 a class and open to non-members
+\newline
+
+Ride4Lyfe
+
+Instructor: Flynn Rider
+
+Time: 6:00 am - 7:00 am MWF
+
+Location: 5.2 mi. from Candyland
+
+Cost: \$15 a class and open to non-members
+\newline
+
+Spinergy
+
+Instructor: Syn Ergy
+
+Time: 12:00 pm - 1:00 pm
+
+Location: 6 mi. from Sesame St. 
+
+Cost: \$10 a class for members; \$20 for non-members
+\\
+\hline
+\end{tabular}
+
+\item Barbara wants to schedule (and pay for) a class with Ride4Lyfe.
+
+\begin{tabular}{| m{4cm} | m{11cm} |}
+\hline
+User Requirements: & Barbara wants to schedule (and pay for) a class with Ride4Lyfe. \\
+\hline
+Inputs: & Barbara specifies that she wants to attend the Wednesday class.
+She provides her payment information. 
+Card Number: 1234567890, Security code: 000, Name on Card: Barbara B. Babs, and Billing Address: 1234 Sesame St.
+Then she clicks checkout.
+\\
+\hline
+Output: & The system sends a confirmation email and updates Barbara’s schedule in her class manager that shows her day to day activity. A new time block is added from 6:00 am - 7:00 am on Wednesday morning.  The system sends her a text message reminder the day prior to her cycling class since she set this as one of her preferences. \\
+\hline
+\end{tabular}
+\end{enumerate}
+
+\newpage
+\subsubsection{Gretchen Weiners}
+\begin{enumerate}
+\item Gretchen Wieners wants to search for a kickboxing class near her.
+
+\begin{tabular}{| m{4cm} | m{11cm} |}
+\hline
+User Requirements: & Gretchen has an existing account and has already specified her preferences. \\
+\hline
+Inputs: & “kickboxing” search and her preferences include:
+Price range from \$30-\$55, 15 mi radius from her home on Rodeo Dr, Hollywood, CA, class size of 15 people or less. Email preferences.
+
+Her availability:
+Monday, Tuesday 5:30 pm - 8:30 pm
+Wednesday 8 pm - 11 pm 
+\\
+\hline
+Output: & Options:
+
+Kicking It To The Max 
+
+Instructor: Sally Ride
+
+Time: 6:30 pm - 7:30 pm MT
+
+Location: 2.1 mi. from Rodeo Dr.
+
+Cost: \$50 a class and open to non-members
+
+Class size: 10 people
+\newline
+
+Cali’s Recreation Center 
+
+Instructor: Anne Hathaway
+
+Time: 5:30 pm - 6:30 pm W
+
+Location: 7.5 mi. from Rodeo Dr.
+
+Cost: \$30 a class and open to non-members
+
+Class size: 15 people
+\newline
+
+KickStart
+
+Instructor: Jordin Sparks
+
+Time: 10:00 pm - 11:00 pm W
+
+Location: 10 mi. from Rodeo Dr. 
+
+Cost: \$10 a class for members; \$20 for non-members
+
+Class size: 15 people\\
+
+\hline
+\end{tabular}
+
+\item Gretchen wants to schedule (and pay for) a class with Kicking It To The Max.
+
+\begin{tabular}{| m{4cm} | m{11cm} |}
+\hline
+User Requirements: & Gretchen has searched for a class and selects option 1.\\
+\hline
+Inputs: & Gretchen specifies she wants to attend the Monday class.
+She is a regular customer so her payment information is saved by the system. She verifies this information and clicks checkout.\\
+\hline
+Output: & The system sends a confirmation email and updates Gretchen’s schedule in her class manager that shows her day to day activity. A new time block is added from 6:30 pm to 7:30 pm on Monday.  The system sends her an email reminder since she has set this as a preference.
+\\
+\hline
+\end{tabular}
+\end{enumerate}
+
+\subsection{Providers}
+\subsubsection{ZigZag}
+\begin{enumerate}
+\item ZigZag wants to join the Personal Training System as a company and offer classes. They sign up with a company username and password.  Upon creating an account ZigZag is prompted by the system to provide company information.
+
+\begin{tabular}{| m{4cm} | m{11cm} |}
+\hline
+User Requirements: & Company ZigZag has logged in with their new account. \\
+\hline
+Inputs: & They provide their employer identification number and taxpayer identification number.  They also supply their address which is 263 ZigZagoon, Hoenn, SC 29999. They opt to supply a company website and provide their business hours. \\
+\hline
+Output: & The system saves Company ZigZag’s information and displays the company profile page. \\
+\hline
+\end{tabular}
+
+\ item ZigZag wants to add courses provided by different trainers.
+
+\begin{tabular}{| m{4cm} | m{11cm} |}
+\hline
+User Requirements: & ZigZag has created an account as shown in scenario 1. \\
+\hline
+Inputs: & ZigZag clicks to add courses and the system prompts them to input class information.  The information specified is:
+
+Type of class:  Kick-boxing
+
+Instructor: Zee Ziggins 
+
+Time: 5:30 pm - 6:30 pm MWF, 7:00 pm - 8:00 pm T, TH
+
+Cost: \$20 a class, open to non-members
+
+Spaces available through site: 15
+\newline
+
+Type of class: Core Strengthening
+
+Instructor: The Coolkid
+
+Time: 6:00 am - 7:30 am Every weekday, 8:00-9:30 am TTH
+
+Cost: \$45 a class
+
+Spaces available through site: 9
+
+...
+
+ZigZags also provides a company bank account or credit card information to pay a processing fee. (monthly subscription)
+\\
+\hline
+Output: & The system saves the list of Company ZigZag’s available classes to their profile page. These courses are also uploaded into the search list.  New time blocks are added to ZigZag’s schedule for the classes at the specified times.  When trainees add their course, ZigZag can see the specific users who have added.  System collects payment from ZigZag for the processing fee and sends a confirmation message. \\
+\hline
+\end{tabular}
+\end{enumerate}
+
+\newpage
+\subsection{Administrators/Moderators}
+\subsubsection{Jimmy}
+\begin{enumerate}
+\item Jimmy Fallon has reviewed a flag from the system informing him that he needs to confirm or deny the credibility of a fitness provider.
+
+\begin{tabular}{| m{4cm} | m{11cm} |}
+\hline
+User Requirements: & Jimmy Fallon has logged in on an admin account that allows him to see fitness provider and user information.\\
+\hline
+Inputs: & Jimmy clicks on the flagged fitness provider and views the company information. 
+
+Company name: MC Scammers
+
+Location: Timbuktu
+
+The system indicates that the Employer ID number and Tax ID number are invalid. 
+\newline
+
+Jimmy decides to disable the account so MC Scammers cannot add any courses. He clicks on a notify company button.
+\\
+\hline
+Output: & The system informs Jimmy that the account is disabled.  The system also sends a warning to the fitness provider informing them to re-input their business information. 
+\\
+\hline
+\end{tabular}
+\end{enumerate}
+
+\end{document}
